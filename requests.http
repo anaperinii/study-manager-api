@@ -1,0 +1,76 @@
+### Requisições de exemplo (VS Code REST Client / IntelliJ HTTP Client)
+@baseUrl = http://localhost:3000/api
+
+### Health check
+GET {{baseUrl}}/health
+
+### Criar usuário
+POST {{baseUrl}}/users
+Content-Type: application/json
+
+{
+  "name": "Ana Perini",
+  "email": "ana@exemplo.com"
+}
+
+### Listar usuários
+GET {{baseUrl}}/users
+
+### Buscar usuário por id
+GET {{baseUrl}}/users/1
+
+### Atualizar usuário
+PUT {{baseUrl}}/users/1
+Content-Type: application/json
+
+{
+  "name": "Ana L. Perini"
+}
+
+### Remover usuário
+DELETE {{baseUrl}}/users/1
+
+### Criar curso
+POST {{baseUrl}}/courses
+Content-Type: application/json
+
+{
+  "title": "Clean Architecture",
+  "description": "Curso sobre arquitetura limpa aplicada a APIs.",
+  "workload": 40
+}
+
+### Listar cursos
+GET {{baseUrl}}/courses
+
+### Buscar curso por id
+GET {{baseUrl}}/courses/1
+
+### Atualizar curso
+PUT {{baseUrl}}/courses/1
+Content-Type: application/json
+
+{
+  "workload": 60
+}
+
+### Remover curso
+DELETE {{baseUrl}}/courses/1
+
+### Criar matrícula
+POST {{baseUrl}}/enrollments
+Content-Type: application/json
+
+{
+  "user_id": 1,
+  "course_id": 1
+}
+
+### Listar matrículas
+GET {{baseUrl}}/enrollments
+
+### Cancelar matrícula
+DELETE {{baseUrl}}/enrollments/1
+
+### Consulta relacional: usuário + cursos matriculados
+GET {{baseUrl}}/users/1/courses
