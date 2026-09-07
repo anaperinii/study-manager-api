@@ -1,0 +1,10 @@
+node_modules/
+dist/
+*.tsbuildinfo
+.env
+*.db
+*.db-journal
+prisma/dev.db
+prisma/migrations/dev.db*
+npm-debug.log*
+.DS_Store
